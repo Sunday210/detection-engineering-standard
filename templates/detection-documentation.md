@@ -1,9 +1,4 @@
 # Detection Documentation Record
-
-> Complete one copy for every detection. Store the completed copy beside the rule, tests, and validation evidence in the detection repository. This record is intended for both SOC analysts reviewing alerts and detection engineers maintaining or reusing the rule.
->
-> The fields marked **[Book — Chapter 8]** reproduce the categories and property names of the documentation template in *Practical Threat Detection Engineering*, Table 8.1 (printed pages 171–173). Fields marked **[Project extension]** are additional controls proposed for this SIEM project.
-
 ## 1. Maintenance information
 
 | Property | Value |
