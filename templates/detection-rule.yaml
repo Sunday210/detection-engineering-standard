@@ -1,0 +1,91 @@
+# Project metadata wrapper. This is NOT a native Elastic rule export format.
+# Keep platform-specific rule exports in the deployment directory and link them here.
+
+id: DET-WIN-001
+title: "Replace with a precise detection title"
+requirement_id: REQ-DE-YYYY-NNN
+owner: detection-engineering
+status: development  # development | experimental | test | stable | deprecated
+maturity: experimental
+created: "YYYY-MM-DD"
+updated: "YYYY-MM-DD"
+revision: 1
+priority: medium
+
+summary: >-
+  Explain the behavior detected and why it matters.
+
+indicator_type: behavioral  # static | behavioral | statistical | hybrid
+
+severity: medium       # informational | low | medium | high | critical
+confidence: medium     # low | medium | high
+risk_score: null       # Set according to the project's approved scoring policy.
+
+mitre_attack:
+  tactics: []
+  techniques: []
+  mapping_note: "Map only behavior the rule directly or explicitly indirectly identifies."
+
+data_sources:
+  - integration: ""
+    dataset: ""
+    event_types: []
+    required_fields: []
+    normalization: "ECS or documented project mapping"
+
+implementation:
+  platform: elastic-security
+  rule_type: "kql | eql | threshold | indicator_match | other"
+  language: "KQL"
+  query_file: "rule.kql"
+  interval: "5m"
+  lookback: "10m"
+  index_patterns: []
+  enabled_by_default: false
+
+logic:
+  detection_description: "Describe matching conditions in language independent of query syntax."
+  sequence_or_aggregation: ""
+  exclusions: []
+  suppression: ""
+
+false_positives:
+  - scenario: ""
+    handling: ""
+
+investigation:
+  initial_checks: []
+  evidence_to_collect: []
+  related_detections: []
+  escalation_criteria: []
+
+response:
+  recommended_actions: []
+  automation_tier: 0  # 0 read-only enrichment; 1 case/notification; 2 approved reversible action; 3 human-approved high impact
+  approval_required: true
+
+references:
+  requirement_ticket: ""
+  threat_intelligence: []
+  technical_references: []
+
+validation:
+  positive_tests: []
+  negative_tests: []
+  edge_case_tests: []
+  last_validated: null
+  validation_report: ""
+
+lifecycle:
+  deployed_environment: ""
+  deployed_at: null
+  reviewer: ""
+  review_due: null
+  rollback_reference: ""
+
+limitations: []
+revision_history:
+  - revision: 1
+    date: "YYYY-MM-DD"
+    author: ""
+    change: "Initial draft"
